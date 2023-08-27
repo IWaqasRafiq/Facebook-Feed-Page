@@ -1,16 +1,19 @@
-div.last {
-    color: red;
+#root{
+    display: flex;
+    justify-content: center;
 }
-
-
 
 div.post {
     /* border: 1px solid black; */
     margin: 2rem;
     padding: 1.5rem;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    max-width: 35rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center !important;
 }
-div.post h1{
+div.post h4{
     margin-bottom: 0;
 }
 div.post > .postHead{
@@ -37,10 +40,13 @@ div.postFooter{
 
 div.postFooter .button{
     color: #59626B;
-    background-color: #F2F2F2;
-    border-radius: 8px;
+    border-radius: 5px;
     padding: 0.3rem 1rem;
-    margin: 0 1rem;
+    margin: 0.5rem 0.3rem 0;
     flex-grow: 1;
     text-align: center;
+}
+div.postFooter .button:hover{
+    background-color: #F2F2F2;
+    cursor: pointer;   
 }
