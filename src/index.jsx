@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import InputBox from './input.jsx'
 import "./styles.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  profileImg  from "./img/profile.jpg";
@@ -42,6 +43,7 @@ function Post(props){
 
 ReactDOM.render(
     <div>
+      <InputBox />
       <Post
         profileImg={profileImg}
         name="Inzamam Malik"
