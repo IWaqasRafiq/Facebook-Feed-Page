@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles.css";
+import "../styles.css";
 import { RiLiveLine } from "react-icons/ri";
 import { FaPhotoVideo } from "react-icons/fa";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
@@ -10,14 +10,12 @@ function input() {
     <div className="MInputDiv">
       <div className="inputDiv">
         <form className="inputForm">
-          <input
-            className="input"
-            type="text"
-            placeholder={`What's on your mind.`}
-          />
+            <button className="inputButton">
+            <div className="buttonText">What's on your mind ?</div>
+            </button>
         </form>
       </div>
-
+      <hr />
       <div className="inputFooter">
         <div className="inputIcon">
           <RiLiveLine className="live"/>

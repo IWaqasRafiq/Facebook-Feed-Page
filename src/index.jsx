@@ -1,6 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import InputBox from './input.jsx'
+import InputBox from './components/input.jsx'
+import PostPopup from "./components/postPopup.jsx";
 import "./styles.css"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import  profileImg  from "./img/profile.jpg";
@@ -23,7 +24,7 @@ function Post(props){
           <p> {props.text}</p>
     
           <img className="postImg" src={props.img} alt="" />
-    
+      <hr />
           <div className="postFooter">
             <div className="button">
               < AiOutlineLike />
@@ -42,7 +43,8 @@ function Post(props){
 }
 
 ReactDOM.render(
-    <div>
+    <div className="mainDiv" >
+      <PostPopup />
       <InputBox />
       <Post
         profileImg={profileImg}
