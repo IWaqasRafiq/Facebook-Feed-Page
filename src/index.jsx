@@ -24,7 +24,7 @@ function Post(props){
           <p> {props.text}</p>
     
           <img className="postImg" src={props.img} alt="" />
-      <hr />
+          <hr className="PFhr" />
           <div className="postFooter">
             <div className="button">
               < AiOutlineLike />
