@@ -1,0 +1,64 @@
+.inputFooter{
+    display: flex;
+    justify-content: space-around;
+
+}
+.inputIcon{
+    display: flex;
+    flex-grow: 1;
+    border-radius: 5px;
+    padding: 0.3rem 1rem;
+    margin: 0.5rem 0.3rem 0;
+    align-items: center;
+    /* justify-content: center; */
+    font-size: medium;
+}
+.MInputDiv{
+    box-shadow: rgba(90, 89, 89, 0.3) 0px 5px 18px, rgba(0, 0, 0, 0.22) 0px 2px 4px;
+    border-radius: 8px;
+    /* max-width: 35rem !important; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center!important;
+    margin-top: 2rem;
+    padding: 1rem;
+    
+}
+.inputForm{
+    padding: 1rem 0 0 0;
+}
+input{
+    outline: none;
+    width: 100%;
+    padding: 0.5rem;
+}
+.live{
+    color: crimson;
+    margin-right: 0.2rem;
+    font-size: large;
+}
+.pv{
+    color: cadetblue;
+    margin-right: 0.2rem;
+    font-size: large;
+}
+.emoji{
+    margin-right: 0.2rem;
+    font-size: large;
+    color: chocolate;
+}
+.inputButton{
+    padding: 0.5rem;
+    border: #BABABC;
+    border-radius: 25px;
+    display: flex;
+    width: 100%;
+}
+.buttonText{
+    font-size: medium;    
+}
+hr {
+    margin: 1rem 0 0 0 !important;
+    z-index: -99;
+
+}

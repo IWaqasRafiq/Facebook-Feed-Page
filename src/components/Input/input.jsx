@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles.css";
+import "./Input.css";
 import { RiLiveLine } from "react-icons/ri";
 import { FaPhotoVideo } from "react-icons/fa";
 import { MdOutlineEmojiEmotions } from "react-icons/md";
 
 
-function input() {
+function Input() {
   return (
     <div className="MInputDiv">
       <div className="inputDiv">
@@ -33,4 +33,4 @@ function input() {
     </div>
   );
 }
-export default input;
+export default Input;

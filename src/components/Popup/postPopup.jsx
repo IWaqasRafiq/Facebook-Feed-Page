@@ -1,10 +1,10 @@
 import React from "react";
-import "../styles.css";
+import "./Popup.css";
 import { BsPersonCircle } from "react-icons/bs";
 import { RiLiveLine } from "react-icons/ri";
 
 
-function popup (props) {
+function Popup (props) {
  return (
   <div classNameName="postpopup" id="postpopup">
   <div className="edit-popup-content" id="edit-popup-content">
@@ -41,4 +41,4 @@ function popup (props) {
  );  
 }
 
-export default popup;
+export default Popup;
