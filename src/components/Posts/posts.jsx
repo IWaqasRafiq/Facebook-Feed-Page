@@ -19,7 +19,7 @@ import { BsThreeDotsVertical } from "react-icons/bs";
 const Posts = () => {
   return (
     <div>
-      <Card maxW="md">
+      <Card maxW="md" m="6">
         <CardHeader>
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
