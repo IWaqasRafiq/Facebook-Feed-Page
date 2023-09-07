@@ -7,9 +7,11 @@ import "./Home.css";
 const Home = () => {
   return (
     <div>
+    <div className="mid-col">
       <InputBox />
       <Posts />
       <PostPopup />
+    </div>
     </div>
   );
 };

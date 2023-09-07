@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.mid-col{
+    margin-top: 2rem;
+    padding: 3px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #E4E6E9;
+    
+}
+html{
+    background-color: #E4E6E9;
+}

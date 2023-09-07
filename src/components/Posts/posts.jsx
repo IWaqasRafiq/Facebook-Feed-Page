@@ -9,17 +9,20 @@ import {
   Text,
   Box,
   Flex,
-  IconButton,
   Button,
+  IconButton,
   Image,
+  Divider,
 } from "@chakra-ui/react";
 import { BiLike, BiChat, BiShare } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
+import { Timestamp } from "react-timestamp";
+
 
 const Posts = () => {
   return (
     <div>
-      <Card maxW="md">
+      <Card maxW="lg" m="6">
         <CardHeader>
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -27,7 +30,10 @@ const Posts = () => {
 
               <Box>
                 <Heading size="sm">Segun Adebayo</Heading>
-                <Text>Creator, Chakra UI</Text>
+                <Text fontSize="sm" color="gray.500">
+                  2 Days Ago
+                </Text> 
+
               </Box>
             </Flex>
             <IconButton
@@ -38,7 +44,7 @@ const Posts = () => {
             />
           </Flex>
         </CardHeader>
-        <CardBody>
+        <CardBody paddingTop={-1}>
           <Text>
             With Chakra UI, I wanted to sync the speed of development with the
             speed of design. I wanted the developer to be just as excited as the
@@ -50,8 +56,10 @@ const Posts = () => {
           src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           alt="Chakra UI"
         />
-
+        <Divider color="blackAlpha" />
         <CardFooter
+          paddingTop={-0.5}
+          paddingBottom={-0.5}
           justify="space-between"
           flexWrap="wrap"
           sx={{
