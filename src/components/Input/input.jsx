@@ -7,6 +7,7 @@ import { MdOutlineEmojiEmotions } from "react-icons/md";
 
 function Input() {
   return (
+    <Card maxW="md">
     <div className="MInputDiv">
       <div className="inputDiv">
         <form className="inputForm">
@@ -31,6 +32,7 @@ function Input() {
         </div>
       </div>
     </div>
+      </Card>
   );
 }
 export default Input;
