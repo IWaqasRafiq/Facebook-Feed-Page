@@ -22,7 +22,11 @@ import { Timestamp } from "react-timestamp";
 const Posts = () => {
   return (
     <div>
+<<<<<<< HEAD
       <Card maxW="lg" m="6">
+=======
+      <Card maxW="md" m="6">
+>>>>>>> 85783ce2511d226fdf6ef7c56720302d4ee56f67
         <CardHeader>
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
