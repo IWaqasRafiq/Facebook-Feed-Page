@@ -4,7 +4,8 @@ import { BsPersonCircle } from "react-icons/bs";
 import { RiLiveLine } from "react-icons/ri";
 
 
-function Popup (props) {
+const Popup = ({onClose}) => {
+    
  return (
   <div classNameName="postpopup" id="postpopup">
   <div className="edit-popup-content" id="edit-popup-content">
@@ -35,7 +36,11 @@ function Popup (props) {
                   </div>
               </div>
               <button id="post-button" className="postbutton">Post</button>
-              <button id="cancel-edit-button">Cancel</button>
+              <button id="cancel-edit-button"
+          onClick={() => {
+            onClose(); // Call the provided function to close the popup
+          }}
+              >Cancel</button>
           </div>
       </div>
  );  
