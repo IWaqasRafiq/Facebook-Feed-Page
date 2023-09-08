@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 *{
     margin: 0;
     padding: 0;
@@ -16,16 +15,3 @@
 html{
     background-color: #E4E6E9;
 }
-=======
-*{
-    margin: 0;
-    padding: 0;
-}
-.mid-col{
-    margin-top: 2rem;
-    padding: 3px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
->>>>>>> 85783ce2511d226fdf6ef7c56720302d4ee56f67

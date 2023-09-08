@@ -8,11 +8,7 @@ import { Card, Divider } from "@chakra-ui/react";
 
 function Input() {
   return (
-<<<<<<< HEAD
     <Card minW="lg">
-=======
-    <Card maxW="md">
->>>>>>> 85783ce2511d226fdf6ef7c56720302d4ee56f67
     <div className="MInputDiv">
       <div className="inputDiv">
         <form className="inputForm">
@@ -39,11 +35,7 @@ function Input() {
         </div>
       </div>
     </div>
-<<<<<<< HEAD
     </Card>
-=======
-      </Card>
->>>>>>> 85783ce2511d226fdf6ef7c56720302d4ee56f67
   );
 }
 export default Input;

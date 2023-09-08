@@ -13,16 +13,24 @@ import {
   IconButton,
   Image,
   Divider,
+  Collapse,
 } from "@chakra-ui/react";
+import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { BiLike, BiChat, BiShare } from "react-icons/bi";
-import { BsThreeDotsVertical } from "react-icons/bs";
-import { Timestamp } from "react-timestamp";
-
+import { useState } from "react";
+import {
+  EditIcon,
+  HamburgerIcon,
+} from "@chakra-ui/icons";
+import { MdOutlineReportOff, MdOutlineDeleteOutline  } from "react-icons/md";
 
 const Posts = () => {
+  const [show, setShow] = useState(false);
+  const handleToggle = () => setShow(!show);
+
   return (
     <div>
-      <Card maxW="md" m="6">
+      <Card maxW="lg" m="6">
         <CardHeader>
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -32,24 +40,50 @@ const Posts = () => {
                 <Heading size="sm">Segun Adebayo</Heading>
                 <Text fontSize="sm" color="gray.500">
                   2 Days Ago
-                </Text> 
-
+                </Text>
               </Box>
             </Flex>
-            <IconButton
-              variant="ghost"
-              colorScheme="gray"
-              aria-label="See menu"
-              icon={<BsThreeDotsVertical />}
-            />
+            <Menu>
+              <MenuButton
+                as={IconButton}
+                aria-label="Options"
+                _hover="null"
+                bg="null"
+                icon={<HamburgerIcon />}
+              />
+              <MenuList>
+                <MenuItem icon={<EditIcon />}>
+                  Edit Post...
+                </MenuItem>
+                <MenuItem icon={<MdOutlineReportOff />}>
+                  Report Post
+                </MenuItem>
+                <MenuItem icon={<MdOutlineDeleteOutline />} >
+                  Delete Post
+                </MenuItem>
+              </MenuList>
+            </Menu>
           </Flex>
         </CardHeader>
         <CardBody paddingTop={-1}>
-          <Text>
-            With Chakra UI, I wanted to sync the speed of development with the
-            speed of design. I wanted the developer to be just as excited as the
-            designer to create a screen.
-          </Text>
+          <Collapse startingHeight={50} in={show}>
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus
+            terry richardson ad squid. Nihil anim keffiyeh helvetica, craft beer
+            labore wes anderson cred nesciunt sapiente ea proident. Lorem, ipsum
+            dolor sit amet consectetur adipisicing elit. Asperiores laborum,
+            alias mollitia illum doloribus reiciendis iste, quo nemo harum
+            molestias quam quaerat eum fugit, minima nisi enim! Harum, non
+            quaerat.
+          </Collapse>
+          <Button
+            _hover="null"
+            bg="null"
+            size="sm"
+            paddingLeft="-0.5"
+            onClick={handleToggle}
+          >
+            Show {show ? "Less" : "More"}
+          </Button>
         </CardBody>
         <Image
           objectFit="cover"
