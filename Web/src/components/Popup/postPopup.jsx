@@ -1,11 +1,12 @@
 import React from "react";
+import { useState  } from "react";
 import "./Popup.css";
 import { BsPersonCircle } from "react-icons/bs";
 import { RiLiveLine } from "react-icons/ri";
 
 
 const Popup = ({onClose}) => {
-    
+
  return (
   <div classNameName="postpopup" id="postpopup">
   <div className="edit-popup-content" id="edit-popup-content">
@@ -13,7 +14,7 @@ const Popup = ({onClose}) => {
               <hr />
               <div className="userDetails">
                   <BsPersonCircle className="person"/>
-                  <input type="text" id="username" placeholder="username" />
+                  <input type="text" id="username"  placeholder="username" />
               </div>
               <div className="ppost">
                   <textarea id="caption" placeholder="What's on your mind ?"></textarea>

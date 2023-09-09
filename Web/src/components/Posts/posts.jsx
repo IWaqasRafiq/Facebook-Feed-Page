@@ -23,10 +23,13 @@ import {
   HamburgerIcon,
 } from "@chakra-ui/icons";
 import { MdOutlineReportOff, MdOutlineDeleteOutline  } from "react-icons/md";
+import  moment  from "moment";
 
 const Posts = () => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
+  const timeStamp = moment().fromNow();
+
 
   return (
     <div>
@@ -39,7 +42,7 @@ const Posts = () => {
               <Box>
                 <Heading size="sm">Segun Adebayo</Heading>
                 <Text fontSize="sm" color="gray.500">
-                  2 Days Ago
+                  {timeStamp}
                 </Text>
               </Box>
             </Flex>
