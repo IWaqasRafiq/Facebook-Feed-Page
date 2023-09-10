@@ -14,7 +14,7 @@ app.use(cors())
 app.use("/api/v1", postRouter)
 
 
-app.use(express.static(path.join(__dirname, 'Web')))
+app.use(express.static(path.join(__dirname, 'Web/build')))
 
 const PORT = process.env.PORT || 5501;
 app.listen(PORT, () => {
