@@ -18,12 +18,9 @@ import {
 import { Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react";
 import { BiLike, BiChat, BiShare } from "react-icons/bi";
 import { useState } from "react";
-import {
-  EditIcon,
-  HamburgerIcon,
-} from "@chakra-ui/icons";
-import { MdOutlineReportOff, MdOutlineDeleteOutline  } from "react-icons/md";
-import  moment  from "moment";
+import { EditIcon, HamburgerIcon } from "@chakra-ui/icons";
+import { MdOutlineReportOff, MdOutlineDeleteOutline } from "react-icons/md";
+import moment from "moment";
 
 const ZeroPost = () => {
   const [show, setShow] = useState(false);
@@ -31,7 +28,7 @@ const ZeroPost = () => {
   const timeStamp = moment().fromNow();
   return (
     <div>
-      <Card maxW="lg" m="6">
+      <Card maxW="lg" m="6" >
         <CardHeader>
           <Flex spacing="4">
             <Flex flex="1" gap="4" alignItems="center" flexWrap="wrap">
@@ -53,13 +50,9 @@ const ZeroPost = () => {
                 icon={<HamburgerIcon />}
               />
               <MenuList>
-                <MenuItem icon={<EditIcon />}>
-                  Edit Post...
-                </MenuItem>
-                <MenuItem icon={<MdOutlineReportOff />}>
-                  Report Post
-                </MenuItem>
-                <MenuItem icon={<MdOutlineDeleteOutline />} >
+                <MenuItem icon={<EditIcon />}>Edit Post...</MenuItem>
+                <MenuItem icon={<MdOutlineReportOff />}>Report Post</MenuItem>
+                <MenuItem icon={<MdOutlineDeleteOutline />}>
                   Delete Post
                 </MenuItem>
               </MenuList>
@@ -91,7 +84,6 @@ const ZeroPost = () => {
           src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           alt="Chakra UI"
         />
-        <Divider color="blackAlpha" />
         <CardFooter
           paddingTop={-0.5}
           paddingBottom={-0.5}
@@ -103,6 +95,7 @@ const ZeroPost = () => {
             },
           }}
         >
+          <Divider color="gray.300" />
           <Button flex="1" variant="ghost" leftIcon={<BiLike />}>
             Like
           </Button>
@@ -118,11 +111,12 @@ const ZeroPost = () => {
   );
 };
 
-
-const Posts = ({postTitle, postBody}) => {
+const Posts = ({ postTitle, postBody }) => {
   const [show, setShow] = useState(false);
   const handleToggle = () => setShow(!show);
   const timeStamp = moment().fromNow();
+  const wordCount = postBody.split(/\s+/).length;
+
   return (
     <div>
       <Card maxW="lg" m="6">
@@ -147,13 +141,9 @@ const Posts = ({postTitle, postBody}) => {
                 icon={<HamburgerIcon />}
               />
               <MenuList>
-                <MenuItem icon={<EditIcon />}>
-                  Edit Post...
-                </MenuItem>
-                <MenuItem icon={<MdOutlineReportOff />}>
-                  Report Post
-                </MenuItem>
-                <MenuItem icon={<MdOutlineDeleteOutline />} >
+                <MenuItem icon={<EditIcon />}>Edit Post...</MenuItem>
+                <MenuItem icon={<MdOutlineReportOff />}>Report Post</MenuItem>
+                <MenuItem icon={<MdOutlineDeleteOutline />}>
                   Delete Post
                 </MenuItem>
               </MenuList>
@@ -161,25 +151,31 @@ const Posts = ({postTitle, postBody}) => {
           </Flex>
         </CardHeader>
         <CardBody paddingTop={0.5}>
-          <Collapse startingHeight={50} in={show}>
-            {postBody}
-          </Collapse>
-          <Button
-            _hover="null"
-            bg="null"
-            size="sm"
-            paddingLeft="-0.5"
-            onClick={handleToggle}
-          >
-            Show {show ? "Less" : "More"}
-          </Button>
+          {wordCount >= 200 ? (
+            <Collapse startingHeight={50} in={show}>
+              {postBody}
+            </Collapse>
+          ) : (
+            postBody
+          )}
+          {wordCount >= 200 && (
+            <Button
+              _hover="null"
+              bg="null"
+              size="sm"
+              paddingLeft="-0.5"
+              onClick={handleToggle}
+            >
+              Show {show ? "Less" : "More"}
+            </Button>
+          )}
         </CardBody>
         <Image
           objectFit="cover"
           src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80"
           alt="Chakra UI"
         />
-        <Divider color="blackAlpha" />
+        <Divider color="ActiveBorder" />
         <CardFooter
           paddingTop={-0.5}
           paddingBottom={-0.5}
@@ -206,4 +202,4 @@ const Posts = ({postTitle, postBody}) => {
   );
 };
 
-export { ZeroPost, Posts}  ;
+export { ZeroPost, Posts };
